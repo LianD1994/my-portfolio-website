@@ -15,6 +15,15 @@
 	<link rel="prefetch" href="icons(color)/Email.png">
 	<link rel="prefetch" href="icons(color)/Github.png">
 	
+	<link rel="prefetch" href="icons/Linkedin.png">
+	<link rel="prefetch" href="icons/Facebook.png">
+	<link rel="prefetch" href="icons/Wechat.png">
+	<link rel="prefetch" href="icons/Email.png">
+	<link rel="prefetch" href="icons/Github.png">
+
+	<link rel="prefetch" href="images/startup-593331_1280 2.jpg">
+	<!--jQuery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
 
 	<title>Chris Ding  </title>
 
@@ -41,37 +50,36 @@
 
 <body>
 
-	<nav class="fixed-nav-bar">
+	<nav id="mainNav" class=" navbar navbar-default navbar-fixed-top">
   	<!-- Fixed navigation bar content -->
 	</nav>
 
 	<!--floating social media icons-->
-	<div class="container" id="iconContainer">
+	<div class="container iconContainer">
 
-		<div class="container" style="position:absolute;height:60px;width:345px;top:5px;right:2px">
+		<div class="container" style="position:absolute;height:60px;width:395px;top:5px;left:5px">
 			<a href="https://www.linkedin.com/in/liangyan-ding">
-				<img onmouseover="this.src='icons(color)/Linkedin.png';" onmouseout="this.src='icons/Linkedin.png';"
-					 title="Linkedin" alt="Linkedin" src="icons/Linkedin.png" width="40px" height="40px"
-					 style="border-radius: 10px;"/>
+				<img class="icon" onmouseover="this.src='icons(color)/Linkedin.png';" onmouseout="this.src='icons/Linkedin.png';"
+					 title="Linkedin" alt="Linkedin" src="icons/Linkedin.png" width="50px" height="50px"/>
 			</a>
 			<a href="https://github.com/LianD1994">
-				<img onmouseover="this.src='icons(color)/Github.png';" onmouseout="this.src='icons/Github.png';"
-					 title="Github" alt="Github" src="icons/Github.png" width="40px" height="40px"
+				<img class="icon" onmouseover="this.src='icons(color)/Github.png';" onmouseout="this.src='icons/Github.png';"
+					 title="Github" alt="Github" src="icons/Github.png" width="50px" height="50px"
 					 style="border-radius: 10px;"/>
 					</a>
 			<a href="">
-				<img onmouseover="this.src='icons(color)/Wechat.png';" onmouseout="this.src='icons/Wechat.png';"
-					 title="Wechat" alt="Wechat" src="icons/Wechat.png" width="40px" height="40px"
+				<img class="icon" onmouseover="this.src='icons(color)/Wechat.png';" onmouseout="this.src='icons/Wechat.png';"
+					 title="Wechat" alt="Wechat" src="icons/Wechat.png" width="50px" height="50px"
 					 style="border-radius: 10px;"/>
 					</a>
 			<a href="https://www.facebook.com/liang.ding.167">
-				<img onmouseover="this.src='icons(color)/Facebook.png';" onmouseout="this.src='icons/Facebook.png';"
-					 title="Facebook" alt="Facebook" src="icons/Facebook.png" width="40px" height="40px"
+				<img class="icon" onmouseover="this.src='icons(color)/Facebook.png';" onmouseout="this.src='icons/Facebook.png';"
+					 title="Facebook" alt="Facebook" src="icons/Facebook.png" width="50px" height="50px"
 					 style="border-radius: 10px;"/>
 					</a>
 			<a href="mailto:chrisd33358@gmail.com">
-				<img onmouseover="this.src='icons(color)/Email.png';" onmouseout="this.src='icons/Email.png';"
-					 title="Email" alt="Email" src="icons/Email.png" width="40px" height="40px"
+				<img class="icon" onmouseover="this.src='icons(color)/Email.png';" onmouseout="this.src='icons/Email.png';"
+					 title="Email" alt="Email" src="icons/Email.png" width="50px" height="50px"
 					 style="border-radius: 10px;"/>
 					</a>
 
@@ -81,7 +89,7 @@
 	</div>
 	<!--end of container-->
 	<section top class="topSection">
-		<div class="blog-header text-center">
+		<div id="description" class="blog-header text-center" style="display: none">
 			<h1 class="blog-title" style="color:aliceblue;">I'm Chris.</h1>
 			<p class="lead blog-description">Welcome to my portfolio website. 
 				<br> This website is currently still under construction. 
@@ -92,20 +100,20 @@
 
 	<section intro class="introSection">
 		<!--picture of my back-->
-		<img class="rounded" src="images/15726494_10208358139895004_9049946143911081375_n.jpg" alt="intro pic"
+		<img class="rounded hideme" src="images/15726494_10208358139895004_9049946143911081375_n.jpg" alt="intro pic"
 		 height="700px" style="position:absolute;margin:50px;max-width:40%">
 
 		<!--self introduction-->
-		<div class="jumbotron" style="position:absolute;background:#f5f5f5;width:60vw;max-width:50vw;margin:50px;right:0;border-radius: 25px;">
+		<div class="jumbotron hideme" style="position:absolute;background:#f5f5f5;width:60vw;max-width:50vw;margin:50px;right:0;border-radius: 25px;">
 
 			<!--added my profile pic here-->
 			<img src="images/643FA285-3451-461D-8C7C-3139C4F0DE0B.JPG" alt="Profile pic" width="80" height="80" style="border-radius: 10px">
 
 			<h2 class="blog-post-title" style="position:absolute;left:160px;top:90px">A Few Words About Me</h2>
 			<br>
-			<p style="font-size:13pt">Hello there! My name is Liangyan Ding (call me Chris). I am currently 22 years old. I recently graduated from Rutgers University with a Bachelor degree in Computer Science.
+			<p style="font-size:13pt"><br>Hello there! My name is Liangyan Ding (call me Chris). I am currently 22 years old. I recently graduated from Rutgers University with a Bachelor degree in Computer Science.
 			<br><br>
-			Despite mainly focused on learning Java and C in college, I have found my passion lies in website front-end development. The web is constantly changing and improving, and it is always growing. As the web will continue to become more and more a part of people's everyday life, I found this ability to create something amazing and beautiful that everyone can see to be fascinating.
+			Despite mainly focused on learning Java and C in college, I have found my passion lies in website front-end development. The web is constantly changing and improving, and it is always growing. As the web will continue to become more and more a part of people's everyday life, I find the ability to create beautiful and interactive website very fascinating.
 			<br><br>
 			As I'm fairly new to the game, I'm eager to learn and experience in this fast growing industry.      
 			</p>
@@ -115,14 +123,14 @@
 
 
 	<!--project section-->
-	<section project style="position:relative;background-color:black;height:1400px;background:url('images/pic_computersupport-e1475009415368.jpg');background-size:cover">
+	<section project class="projectSection">
 		<div>
 			<h2 style="position:absolute;font-size:50px;color:white;margin:50px">Personal Projects</h2>
 			<p class="lead blog-description" style="position:absolute;top:110px;left:50px;color:burlywood;">Some of my school and personal projects.</p>
 		</div>
 
 		<!--project 1-->
-		<div class="jumbotron outer" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.6);;width:93%;height:540px;top:130px;margin:50px;border-radius:25px;z-index:80;">
+		<div class="jumbotron outer hideme" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.6);;width:93%;height:540px;top:130px;margin:50px;border-radius:25px;z-index:80;box-shadow: 0px 2px 20px black;">
 			<div class="container" style="width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent">
 				<h2 style="font-size:50px;color:white;">
 					<img src="images/Screen Shot 2017-06-27 at 3.16.21 PM.png" alt="astar pic" style="float:left;height:400px;margin:60px;">
@@ -138,7 +146,7 @@
 		</div>
 
 		<!--project 2-->
-		<div class="jumbotron outer" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.7);;width:93%;height:540px;top:750px;margin:50px;border-radius:25px;z-index:80;">
+		<div class="jumbotron outer hideme" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.6);;width:93%;height:540px;top:750px;margin:50px;border-radius:25px;z-index:80;box-shadow: 0px 2px 20px black;">
 			<div class="container" style="width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent">
 				<h2 style="font-size:50px;color:white;">
 					<img src="images/Screen Shot 2017-07-05 at 5.28.04 PM.png" alt="link-checker pic" style="float:right;height:400px;margin:60px;">
@@ -187,12 +195,15 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script>
 	window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 </script>
+
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
 <!--google analytics script-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -203,5 +214,67 @@
   ga('create', 'UA-101997709-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+<!--collapse the navbar on scroll-->
+<script>
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
+</script>
+
+<script>
+	$(document).on('scroll', function() {
+  		if ($(document).scrollTop() > 50) {
+    		$('.iconContainer img').css('width', '30px');
+    		$('.iconContainer img').css('height', '30px');
+    		$('.iconContainer').css('width', '290px');
+			$('.resume-btn').css('height', '30px');
+			$('.resume-btn').css('line-height', '5px');
+			$('.resume-btn').css('right', '100px');
+  		} else {
+    		$('.iconContainer img').css('width', '50px');
+    		$('.iconContainer img').css('height', '50px');
+    		$('.iconContainer').css('width', '400px');
+			$('.resume-btn').css('height', '50px');
+			$('.resume-btn').css('line-height', '25px');
+			$('.resume-btn').css('right', '10px');
+  		}
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight()/2;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},500);
+            }
+            
+        }); 
+    
+    });
+    
+});
+</script>
+
+<script type="text/javascript">
+   document.getElementById("description").style.display = "block";
+
+   window.onload = function() 
+  { document.getElementById("hideAll").style.display = "none"; }
+ </script> 
 
 </html>
