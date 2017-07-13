@@ -8,6 +8,10 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
+
+	<!--jQuery-->
+	<script language="Javascript" type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
 	<!--preload the colored icon-->
 	<link rel="prefetch" href="icons(color)/Linkedin.png">
 	<link rel="prefetch" href="icons(color)/Facebook.png">
@@ -22,16 +26,17 @@
 	<link rel="prefetch" href="icons/Github.png">
 
 	<link rel="prefetch" href="images/startup-593331_1280 2.jpg">
-	<!--jQuery-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-
+	
 	<title>Chris Ding  </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
+	<!--animate.css-->
+	<link href="animate.css" rel="stylesheet">
+
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
 
 	<!-- Custom styles for this template -->
 	<link href="blog.css" rel="stylesheet">
@@ -46,11 +51,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+	<!--<script>$('#description').hide();</script>-->
 </head>
 
 <body>
 
-	<nav id="mainNav" class=" navbar navbar-default navbar-fixed-top">
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
   	<!-- Fixed navigation bar content -->
 	</nav>
 
@@ -89,33 +96,39 @@
 	</div>
 	<!--end of container-->
 	<section top class="topSection">
-		<div id="description" class="blog-header text-center" style="display: none">
+		<div id="description" class="blog-header text-center">
 			<h1 class="blog-title" style="color:aliceblue;">I'm Chris.</h1>
 			<p class="lead blog-description">Welcome to my portfolio website. 
 				<br> This website is currently still under construction. 
 			</p>
 		</div>
+
+		<script language="Javascript" type="text/javascript">
+			$('#description').hide();
+		</script>
+
 	</section>
 	<!--end of the top section-->
 
 	<section intro class="introSection">
 		<!--picture of my back-->
-		<img class="rounded hideme" src="images/15726494_10208358139895004_9049946143911081375_n.jpg" alt="intro pic"
-		 height="700px" style="position:absolute;margin:50px;max-width:40%">
+		<img class="rounded hideme" id="backpic" src="images/15726494_10208358139895004_9049946143911081375_n.jpg">
 
 		<!--self introduction-->
-		<div class="jumbotron hideme" style="position:absolute;background:#f5f5f5;width:60vw;max-width:50vw;margin:50px;right:0;border-radius: 25px;">
+		<div class="jumbotron hideme" id="intro">
 
 			<!--added my profile pic here-->
 			<img src="images/643FA285-3451-461D-8C7C-3139C4F0DE0B.JPG" alt="Profile pic" width="80" height="80" style="border-radius: 10px">
 
-			<h2 class="blog-post-title" style="position:absolute;left:160px;top:90px">A Few Words About Me</h2>
+			<h2 class="blog-post-title">A Few Words About Me</h2>
 			<br>
-			<p style="font-size:13pt"><br>Hello there! My name is Liangyan Ding (call me Chris). I am currently 22 years old. I recently graduated from Rutgers University with a Bachelor degree in Computer Science.
+			<p>
+				<br>
+				Hello there! My name is Liangyan Ding (call me Chris). I am currently 22 years old. I recently graduated from Rutgers University with a Bachelor degree in Computer Science.
+				<br><br>
+				Despite mainly focused on learning Java and C in college, I have found my passion lies in website front-end development. The web is constantly changing and improving, and it is always growing. As the web will continue to become more and more a part of people's everyday life, I find the ability to create beautiful and interactive website very fascinating.
 			<br><br>
-			Despite mainly focused on learning Java and C in college, I have found my passion lies in website front-end development. The web is constantly changing and improving, and it is always growing. As the web will continue to become more and more a part of people's everyday life, I find the ability to create beautiful and interactive website very fascinating.
-			<br><br>
-			As I'm fairly new to the game, I'm eager to learn and experience in this fast growing industry.      
+				As I'm fairly new to the game, I'm eager to learn and experience in this fast growing industry.
 			</p>
 		</div>
 		<!--end of container-->
@@ -125,15 +138,15 @@
 	<!--project section-->
 	<section project class="projectSection">
 		<div>
-			<h2 style="position:absolute;font-size:50px;color:white;margin:50px">Personal Projects</h2>
-			<p class="lead blog-description" style="position:absolute;top:110px;left:50px;color:burlywood;">Some of my school and personal projects.</p>
+			<h2 id="proSecTitle">Personal Projects</h2>
+			<p id="proSecDes" class="lead blog-description">Some of my school and personal projects.</p>
 		</div>
 
 		<!--project 1-->
-		<div class="jumbotron outer hideme" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.6);;width:93%;height:540px;top:130px;margin:50px;border-radius:25px;z-index:80;box-shadow: 0px 2px 20px black;">
+		<div class="jumbotron projectOne hideme outer" id="astar">
 			<div class="container" style="width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent">
-				<h2 style="font-size:50px;color:white;">
-					<img src="images/Screen Shot 2017-06-27 at 3.16.21 PM.png" alt="astar pic" style="float:left;height:400px;margin:60px;">
+				<h2 id="astarHead">
+					<img src="images/Screen Shot 2017-06-27 at 3.16.21 PM.png" alt="astar pic">
 					<br><br>
 					A-Star Algorithm
 				</h2>
@@ -146,17 +159,17 @@
 		</div>
 
 		<!--project 2-->
-		<div class="jumbotron outer hideme" style="position:absolute;background:steelblue;background-color:rgba(0, 0, 0, 0.6);;width:93%;height:540px;top:750px;margin:50px;border-radius:25px;z-index:80;box-shadow: 0px 2px 20px black;">
+		<div class="jumbotron projectTwo outer hideme" id="link-checker">
 			<div class="container" style="width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent">
-				<h2 style="font-size:50px;color:white;">
-					<img src="images/Screen Shot 2017-07-05 at 5.28.04 PM.png" alt="link-checker pic" style="float:right;height:400px;margin:60px;">
+				<h2 id="linkHead">
+					<img src="images/Screen Shot 2017-07-05 at 5.28.04 PM.png" alt="link-checker pic" >
 					<br><br>
 					Link-Checker
 				</h2>
 				<p style="font-size:18px;color:bisque">
 					A phantomJS script for checking the availability of URLs.
 				</p>
-				<a href="https://github.com/LianD1994/new-link-checker" type="button" class="btn astar-btn btn-lg">Check it out on Github!
+				<a href="https://github.com/LianD1994/Link-checker/blob/master/checker.js" type="button" class="btn astar-btn btn-lg">Check it out on Github!
 				</a>
 			</div>
 		</div>
@@ -188,7 +201,6 @@
 			<a href="#" style="color:white;">Back to top</a>
 		</p>
 	</footer>
-
 </body>
 
 <!-- Bootstrap core JavaScript
@@ -227,6 +239,7 @@ $(window).scroll(function() {
 </script>
 
 <script>
+	if(screen.width >= 1024)
 	$(document).on('scroll', function() {
   		if ($(document).scrollTop() > 50) {
     		$('.iconContainer img').css('width', '30px');
@@ -248,33 +261,82 @@ $(window).scroll(function() {
 
 <script>
 $(document).ready(function() {
-    
+	
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
-    
+
+		
         /* Check the location of each desired element */
-        $('.hideme').each( function(i){
-            
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight()/2;
+        $('#backpic').each( function(i){
+			if(screen.width >= 1024){
+				// show backpic same time as intro on desktop
+            	var bottom_of_object = $(this).offset().top + $('#intro').outerHeight()+ 100;
+			}else{
+				// show them one by one on mobile
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+			}
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
-                $(this).animate({'opacity':'1'},500);
+                $(this).animate({'left':'50', 'opacity':'1'},500);
             }
-            
+        });
+		
+
+		$('#intro').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+			if(screen.width>=1024){
+            	if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'right':'50', 'opacity':'1'},500);
+            	}
+			}else{
+				if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'right':'10', 'opacity':'1'},500);
+            	}
+			}
         }); 
-    
+
+		$('#astar').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if(screen.width>=1024){
+            	if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'left':'50', 'opacity':'1'},500);
+            	}
+			}else{
+				if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'left':'10', 'opacity':'1'},500);
+            	}
+			}
+        }); 
+
+		$('#link-checker').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if(screen.width>=1024){
+            	if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'right':'50', 'opacity':'1'},500);
+            	}
+			}else{
+				if( bottom_of_window > bottom_of_object ){
+              	  $(this).animate({'right':'10', 'opacity':'1'},500);
+            	}
+			}
+        }); 
     });
-    
 });
 </script>
 
-<script type="text/javascript">
-   document.getElementById("description").style.display = "block";
+<script>
+	// $('#description').style.display('none');
+window.onload =  function(){
+	$('#description').show();
+};
+</script>
 
-   window.onload = function() 
-  { document.getElementById("hideAll").style.display = "none"; }
- </script> 
 
 </html>

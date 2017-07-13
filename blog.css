@@ -143,6 +143,9 @@ h6, .h6 {
 .blog-post-title {
   margin-bottom: 5px;
   font-size: 30px;
+  position:absolute;
+  left:160px;
+  top:90px
 }
 .blog-post-meta {
   margin-bottom: 20px;
@@ -215,11 +218,6 @@ h6, .h6 {
   display:flex;
   justify-content: center;
   padding: 3px;
-   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
 }
 
 
@@ -261,8 +259,29 @@ h6, .h6 {
   height:800px;
   background:url('images/minimalist_tree-wallpaper-1440x900.jpg');
   background-size:contain;
+  background-repeat: no-repeat;
   box-shadow: 10px 10px 20px rgba(0,0,0,0.8);
   z-index: 50;
+}
+
+#backpic{
+	src:"images/15726494_10208358139895004_9049946143911081375_n.jpg";
+	height: 700px;
+	position:absolute;
+	margin:50px 50px 50px 0px ;
+	max-width:40%;
+}
+
+#intro{
+	position:absolute;
+	background:#f5f5f5;
+	margin:50px 0px 0px 50px;
+	right:0;
+	border-radius: 25px;
+}
+
+#intro p{
+	font-size:13pt;
 }
 
 .projectSection{
@@ -274,6 +293,84 @@ h6, .h6 {
   box-shadow: 0px 10px 20px rgba(0,0,0,1);
   z-index: 40;
 }
+
+#proSecTitle{
+	position:absolute;
+	font-size:50px;
+	color:white;
+	margin:50px;
+}
+
+#proSecDes{
+	position:absolute;
+	top:110px;
+	left:50px;
+	color:burlywood;
+}
+
+/*===ProjectOne===*/
+.projectOne{
+  position:absolute;
+  background:steelblue;
+  background-color:rgba(0, 0, 0, 0.6);
+  width:93%;
+  height:540px;
+  top:130px;
+  margin:50px 50px 50px 0px;
+  border-radius:25px;
+  z-index:80;
+  box-shadow: 0px 2px 20px black;
+  -webkit-animation: all 0.4s ease; 
+       -moz-animation: all 2s ease; 
+        -ms-animation: all 2s ease; 
+         -o-animation: all 2s ease; 
+            animation: all 2s ease;
+}
+
+#astarHead{
+	font-size:50px;
+	color:white;
+}
+
+#astar img{
+	float:left;
+	height:400px;
+	margin:60px;
+}
+/*===End of projectOne===*/
+
+
+/*===ProjectTwo===*/
+.projectTwo{
+  position:absolute;
+  background:steelblue;
+  background-color:rgba(0, 0, 0, 0.6);
+  width:93%;
+  height:540px;
+  top:750px;
+  right:0px;
+  margin:50px 0px 50px 50px;
+  border-radius:25px;
+  z-index:80;
+  box-shadow: 0px 2px 20px black;
+  -webkit-animation: fadein 2s ease; 
+       -moz-animation: fadein 2s; 
+        -ms-animation: fadein 2s; 
+         -o-animation: fadein 2s; 
+            animation: fadein 2s ease;
+}
+
+#linkHead{
+	font-size:50px;
+	color:white;
+}
+
+#link-checker img{
+	float:right;
+	height:400px;
+	margin:60px;
+}
+/*===End of projectTwo===*/
 
 /*navbar*/
 nav.navbar{
@@ -288,38 +385,29 @@ nav.navbar{
 }
 
 nav.navbar.shrink {
-  min-height: 40px;
-  opacity: 0.5;
+  min-height: 45px;
+  opacity: 0;
 }
 
 #description p {
-   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-}
-
-#description h1 {
-   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-}
-
-.fadeIn{
-  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+   -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 4s; /* Firefox < 16 */
         -ms-animation: fadein 4s; /* Internet Explorer */
          -o-animation: fadein 4s; /* Opera < 12.1 */
             animation: fadein 4s;
 }
 
+#description h1 {
+   -webkit-animation: fadein 2s; 
+       -moz-animation: fadein 2s; 
+        -ms-animation: fadein 2s; 
+         -o-animation: fadein 2s; 
+            animation: fadein 2s;
+}
+
 .hideme
 {
     opacity:0;
-    
 }
 
 @keyframes fadein {
@@ -349,4 +437,282 @@ nav.navbar.shrink {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+/*Retina display*/
+@media screen and (min-width: 400px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 30vw;
+  }
+}
+
+/*Retina display*/
+@media screen and (min-width: 600px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 35vw;
+  }
+}
+
+/*Retina display*/
+@media screen and (min-width: 800px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 40vw;
+  }
+}
+
+/*Retina display*/
+@media screen and (min-width: 1024px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 45vw;
+  }
+}
+
+/*Retina display*/
+@media screen and (min-width: 1200px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 50vw;
+  }
+}
+
+/*Retina display*/
+@media screen and (min-width: 1400px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 53vw;
+  }
+}
+
+/*HD*/
+@media screen and (min-width: 1500px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 55vw;
+  }
+}
+
+/*HD*/
+@media screen and (min-width: 1700px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 60vw;
+  }
+}
+
+/*HD*/
+@media screen and (min-width: 1900px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #intro{
+    width: 65vw;
+  }
+}
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* iphone 5 */ 
+@media only screen and (min-width : 320px) and (max-width: 374) {
+	.topSection{
+		background-size: 320px auto;
+		height:100px;
+	}
+}
+
+/* iphone 6, 7 */ 
+@media (min-width : 375px) and (max-width:479px){
+	.topSection{
+		background-size: auto 500px;
+		background-position: -200px 0px;
+		height:500px;
+	}
+	
+	.blog-title{
+		margin-top: 50px;
+		margin-bottom: 0;
+		font-size: 40px;
+		font-weight: normal;
+	}
+
+	.blog-description{
+		font-size:20px
+	}
+
+	.iconContainer{
+		z-index:100;
+		position:fixed;
+		height:65px;
+		top:0px;
+		border: 2px solid transparent; 
+		width:280px;
+		right:0px;
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s;
+	}
+	
+	.iconContainer .container{
+		width: 280px;
+		left:0px;
+	}
+
+	.iconContainer img{
+		width: 30px;
+		height : 30px;
+		right: 20px;
+	}
+
+	.resume-btn{
+		position:absolute;
+		height:30px;
+		width:80px;
+		left:182px;
+		line-height: 5px;
+		background-color:#262626;
+		color:aliceblue;
+		border-width:3px;
+		font-size: 13px;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		border-color:transparent;
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s;
+	}
+
+	.introSection{
+		height:510px;
+		background:url('images/15726494_10208358139895004_9049946143911081375_n.jpg');
+		background-size:cover;
+		background-repeat: no-repeat;
+		box-shadow: 10px 10px 20px rgba(0,0,0,0.8);
+		z-index: 50;
+	}
+
+	#backpic{
+		display:none;
+	}
+
+	#intro {
+		position:absolute;
+		background:rgba(0, 0, 0, 0.6);
+		margin:10px 0px 0px 10px;
+		width:355px;
+		right:0;
+		border-radius: 25px;
+		padding:20px;
+	}
+
+	#intro img{
+		width:40px;
+		height:40px;
+	}
+
+	#intro .blog-post-title{
+		margin-bottom: 5px;
+		font-size: 20px;
+		color:azure;
+		position:absolute;
+		left:80px;
+		top:35px
+	}
+
+	#intro p{
+		font-size: 11pt;
+		color:azure;
+	}
+
+	.projectSection{
+		height:1100px;
+	}
+
+	#proSecTitle{
+		position:absolute;
+		font-size:30px;
+		color:white;
+		margin:20px;
+	}
+
+	#proSecDes{
+		position:absolute;
+		font-size:16px;
+		top:65px;
+		left:20px;
+		color:burlywood;
+	}
+
+	#astar img{
+		height:200px;
+		margin:10px 0px 10px 0px;
+		float:top;
+	}
+
+	.projectOne{
+		height:470px;
+		top:50px;
+		border-radius:10px;
+	}
+
+	#astarHead{
+		font-size:30px;
+		color:white;
+	}
+
+	.astar-btn{
+		position:absolute;
+		margin-right:50px;
+		color:aliceblue;
+		background-color:olivedrab;
+		border-width:5px;
+		font-size:20px;
+		padding:5px;
+		border-color:aliceblue;
+		line-height: 80px;
+		white-space: normal;
+	}
+
+	.projectTwo{
+		height:470px;
+		top:550px;
+		border-radius:10px;
+	}
+
+	#linkHead{
+		font-size:30px;
+		color:white;
+	}
+
+	#link-checker img{
+		float:top;
+		height:200px;
+		margin:10px 0px 10px 0px;
+	}
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
