@@ -164,6 +164,7 @@ h6, .h6 {
   background-color: grey;
   border-top: 1px solid #e5e5e5;
 }
+
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
@@ -237,6 +238,10 @@ h6, .h6 {
   right:20px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s;
+}
+
+.iconContainer .container{
+  position:absolute;height:60px;width:395px;top:5px;left:5px
 }
 
 /*section*/
@@ -327,6 +332,10 @@ h6, .h6 {
             animation: all 2s ease;
 }
 
+.projectOne .container{
+  width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent
+}
+
 #astarHead{
 	font-size:50px;
 	color:white;
@@ -358,6 +367,10 @@ h6, .h6 {
         -ms-animation: fadein 2s; 
          -o-animation: fadein 2s; 
             animation: fadein 2s ease;
+}
+        
+.projectTwo .container{
+  width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent
 }
 
 #linkHead{
