@@ -145,7 +145,7 @@ h6, .h6 {
   font-size: 30px;
   position:absolute;
   left:160px;
-  top:90px
+  top:70px
 }
 .blog-post-meta {
   margin-bottom: 20px;
@@ -159,20 +159,86 @@ h6, .h6 {
 
 .blog-footer {
   padding: 40px 0;
-  color: #999;
   text-align: center;
-  background-color: grey;
-  border-top: 1px solid #e5e5e5;
+   background-color: rgba(0, 0, 0, 0.6);  
+   height:200px;  
+   /* background-color:white;  */
+   /* position:fixed;   */
+    /* z-index:9999999;    */
 }
 
 .blog-footer p:last-child {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 /*
- * My css
+ * === My css ===
  */
  
+ video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index:-9999;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url('images/Screen Shot 2017-07-14 at 8.08.34 AM.png') no-repeat;
+    background-size: cover; 
+}
+
+  .arrow {
+    position:absolute;
+    bottom:200px;
+    left: 0; 
+    right: 0;  
+     margin: auto;   
+    height:100px;
+    width:100px;
+    background:url('images/icon-chevron-down-512px.png'); 
+    background-size:100%;
+    z-index: 9990;
+    border:transparent;
+    
+  }
+
+.bounce{
+    -webkit-animation:bounce 1s infinite;
+    -moz-animation:bounce 1s infinite;
+    -o-animation:bounce 1s infinite;
+    animation:bounce 1s infinite;
+} 
+
+  
+  @-webkit-keyframes bounce {
+    0%       { bottom:200px; }
+    50%      { bottom:185px; }
+    100%     {bottom:170;}
+  }
+  
+   @-moz-keyframes bounce {
+     0%       { bottom:200px; }
+    50%      { bottom:185px; }
+    100%     {bottom:170;}
+  }
+  
+   @-o-keyframes bounce {
+      0%       { bottom:200px; }
+    50%      { bottom:185px; }
+    100%     {bottom:170;}
+  }
+  
+   @keyframes bounce {
+     0%       { bottom:200px; }
+    50%      { bottom:185px; }
+    100%     {bottom:170;}
+  }
+
 .resume-btn{
   position:absolute;
   height:50px;
@@ -247,7 +313,7 @@ h6, .h6 {
 /*section*/
 .topSection{
   position:relative;
-  background:url('images/startup-593331_1280 2.jpg');
+  background-color:rgba(0,0,0,0.6);
   background-size:cover;
   background-repeat: no-repeat;
   height:800px;
@@ -261,41 +327,60 @@ h6, .h6 {
 .introSection{
   position:relative;
   background-color:white;
-  height:800px;
-  background:url('images/minimalist_tree-wallpaper-1440x900.jpg');
-  background-size:contain;
+  height:900px;
+	background:rgba(0, 0, 0, 0.6);
+  background-size:cover;
   background-repeat: no-repeat;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.8);
   z-index: 50;
 }
 
 #backpic{
 	src:"images/15726494_10208358139895004_9049946143911081375_n.jpg";
 	height: 700px;
-	position:absolute;
-	margin:50px 50px 50px 0px ;
-	max-width:40%;
+  position:absolute; 
+  left:0; 
+  margin:20px 0px 20px 0px;
+  border-radius:10px;
+	/* max-width:40%; */
 }
 
+/* intro jumbotron */
+/*here  */
 #intro{
-	position:absolute;
-	background:#f5f5f5;
-	margin:50px 0px 0px 50px;
-	right:0;
-	border-radius: 25px;
+	position:absolute;   
+  background:rgba(0,0,0,0.7);
+  /* margin:50px; */
+  /* max-width:95vw;    */
+  height:850px;  
+	margin:0px 0px 0px 50px;  
+	right:0;  
+	/* border-radius: 25px; */
+}
+
+#profilePic{
+  margin: 0px 0px 0px 600px;
+}
+
+#intro h2{
+  font-size:27pt;
+  /* color:rgb(10,94,43); */
+  color:wheat;
+  margin: 0px 0px 0px 600px;
 }
 
 #intro p{
-	font-size:13pt;
+  font-size:15pt;
+  color:azure;
+  margin: 0px 0px 0px 600px;
 }
 
 .projectSection{
   position:relative;
-  background-color:black;
+  background-color:rgba(0, 0, 0, 0.6);
   height:1400px;
-  background:url('images/pic_computersupport-e1475009415368.jpg');
+   background:url('images/pic_computersupport-e1475009415368.jpg'); 
   background-size:cover;
-  box-shadow: 0px 10px 20px rgba(0,0,0,1);
+  box-shadow: 20px 0px 20px 10px rgba(0,0,0,1);
   z-index: 40;
 }
 
@@ -461,7 +546,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 400px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 30vw;
+    /* width: 30vw; */
   }
 }
 
@@ -469,7 +554,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 600px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 35vw;
+    /* width: 35vw; */
   }
 }
 
@@ -477,7 +562,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 800px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 40vw;
+    /* width: 40vw; */
   }
 }
 
@@ -485,7 +570,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 1024px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 45vw;
+    /* width: 45vw; */
   }
 }
 
@@ -493,7 +578,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 1200px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 50vw;
+    /* width: 50vw; */
   }
 }
 
@@ -501,7 +586,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 1400px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 53vw;
+    /* width: 53vw; */
   }
 }
 
@@ -509,7 +594,7 @@ nav.navbar.shrink {
 @media screen and (min-width: 1500px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 55vw;
+    /* width: 55vw; */
   }
 }
 
@@ -517,15 +602,15 @@ nav.navbar.shrink {
 @media screen and (min-width: 1700px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 60vw;
+    /* width: 60vw; */
   }
 }
 
-/*HD*/
+/*here*/
 @media screen and (min-width: 1900px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #intro{
-    width: 65vw;
+    /* width: 90vw; */
   }
 }
 
@@ -601,11 +686,11 @@ nav.navbar.shrink {
 	}
 
 	.introSection{
-		height:510px;
+    height:510px;
 		background:url('images/15726494_10208358139895004_9049946143911081375_n.jpg');
 		background-size:cover;
 		background-repeat: no-repeat;
-		box-shadow: 10px 10px 20px rgba(0,0,0,0.8);
+		 box-shadow: 10px 10px 20px rgba(0,0,0,0.8); 
 		z-index: 50;
 	}
 
@@ -617,7 +702,7 @@ nav.navbar.shrink {
 		position:absolute;
 		background:rgba(0, 0, 0, 0.6);
 		margin:10px 0px 0px 10px;
-		width:355px;
+		 width:355px; 
 		right:0;
 		border-radius: 25px;
 		padding:20px;

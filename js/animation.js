@@ -18,6 +18,7 @@ $(window).scroll(function () {
     }
 });
 
+/* icon bar collapse animation */
 if (screen.width >= 1024)
     $(document).on('scroll', function () {
         if ($(document).scrollTop() > 50) {
@@ -37,17 +38,15 @@ if (screen.width >= 1024)
         }
     });
 
+// scroll fade in animation
 $(document).ready(function () {
-
     /* Every time the window is scrolled ... */
     $(window).scroll(function () {
-
-
         /* Check the location of each desired element */
         $('#backpic').each(function (i) {
             if (screen.width >= 1024) {
                 // show backpic same time as intro on desktop
-                var bottom_of_object = $(this).offset().top + $('#intro').outerHeight() + 100;
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 400;
             } else {
                 // show them one by one on mobile
                 var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -65,7 +64,7 @@ $(document).ready(function () {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             /* If the object is completely visible in the window, fade it it */
             if (screen.width >= 1024) {
-                if (bottom_of_window > bottom_of_object) {
+                if (bottom_of_window > bottom_of_object - 400) {
                     $(this).animate({ 'right': '50', 'opacity': '1' }, 500);
                 }
             } else {
@@ -104,10 +103,43 @@ $(document).ready(function () {
                 }
             }
         });
+
+        // $('#bottomIcon').each(function (i) {
+        //     var bottom_of_object = $('.projectSection').offset().top + $(this).outerHeight();
+        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
+        //     var top_of_obejct = $(this).offset().top;
+        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
+        //     /* If the object is completely visible in the window, fade it it */
+        //     if (screen.width >= 1024) {
+        //         if (bottom_of_window > bottom_of_object) {
+        //             $(this).show();
+        //         }
+        //         if (bottom_of_window < top_of_Object){
+        //             $(this).hide();
+        //         }
+        //     } else {
+        //         if (bottom_of_window > bottom_of_object) {
+        //             $(this).animate({ 'right': '10', 'opacity': '1' }, 500);
+        //         }
+        //     }
+        // });
+
+        $(document).on('scroll', function () {
+            var top_of_object = $('.projectSection').offset().top;
+        if ($(document).scrollTop() > top_of_object) {
+            $('#bottomIcon').css('display', 'block');
+        } else {
+            $('#bottomIcon').css('display', 'none');
+        }
+    });
+
+
     });
 });
 
 {/* $('#description').style.display('none'); */ }
 window.onload = function () {
     $('#description').show();
+    $('#arrow').show();
+    $('#arrow').addClass('bounce');
 };
