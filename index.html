@@ -18,9 +18,7 @@
 	<link rel="prefetch" href="icons(color)/Twitter.png">
 	<link rel="prefetch" href="icons(color)/Email.png">
 	<link rel="prefetch" href="icons(color)/Github.png">
-	
-	<link rel="prefetch" href="images/Screen Shot 2017-07-14 at 8.08.34 AM.png">
-	
+
 	<title>Chris Ding </title>
 
 	<!-- Bootstrap core CSS -->
@@ -46,7 +44,7 @@
             		<img onmouseover="this.src='icons(color)/Github.png';" onmouseout="this.src='icons/Github.png';" title="Github" alt="Github" src="icons/Github.png" width="40px" height="40px" style="border-radius: 10px;">
          		 </a>
 		<a href="">
-           			<img onmouseover="this.src='icons(color)/Twitter.png';" onmouseout="this.src='icons/Wechat.png';"title="Twitter" alt="Twitter" src="icons/Twitter.png" width="40px" height="40px" style="border-radius: 10px;">
+           			<img onmouseover="this.src='icons(color)/Twitter.png';" onmouseout="this.src='icons/Twitter.png';"title="Twitter" alt="Twitter" src="icons/Twitter.png" width="40px" height="40px" style="border-radius: 10px;">
          	 	</a>
 		<a href="https://www.facebook.com/liang.ding.167">
             		<img onmouseover="this.src='icons(color)/Facebook.png';" onmouseout="this.src='icons/Facebook.png';"title="Facebook" alt="Facebook" src="icons/Facebook.png" width="40px" height="40px" style="border-radius: 10px;">
@@ -97,13 +95,13 @@
 	</div>
 	<!--end of container-->
 	<section top class="topSection">
-		<video playsinline autoplay muted loop poster="images/Screen Shot 2017-07-14 at 8.08.34 AM.png" id="bgvid">
-			<source src="video/Technology Background.mp4" type="video/mp4">
+		<video playsinline autoplay muted loop poster="" id="bgvid">
+			<source src="video/Technology Background.mp4"  type="video/mp4">
 		</video>
 
 		<div id="description" class="blog-header text-center">
-			<h1 class="blog-title" style="color:aliceblue;">I'm Chris.</h1>
-			<p class="lead blog-description">Welcome to my portfolio website.
+			<h1 id="header" class="blog-title" style="color:aliceblue;">I'm Chris.</h1>
+			<p id="paragraph" class="lead blog-description">Welcome to my portfolio website.
 				<br> This website is currently still under construction.
 			</p>
 		</div>
@@ -112,8 +110,10 @@
 		<span  id="arrow" class="arrow"><span>
 		</a>
 
+		<!-- hide the title until the page is loaded  -->
 		<script language="Javascript" type="text/javascript">
-			$('#description').hide();
+			$('#header').hide();
+			$('#paragraph').hide();
 			$('#arrow').hide();
 		</script>
 
@@ -207,20 +207,22 @@
 				<a href="#" style="color:white;">Back to top</a>
 			</p> -->
 	</footer>
-</body>
 
-<!-- Bootstrap core JavaScript
+	<!-- Bootstrap core JavaScript
     ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script>
+	<script>
 			window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 
-</script>
+	</script>
 
-<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
-<script src="js/animation.js"></script>
+	<script src="js/animation.js"></script>
+</body>
+
+
 
 </html>

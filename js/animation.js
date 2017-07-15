@@ -104,42 +104,32 @@ $(document).ready(function () {
             }
         });
 
-        // $('#bottomIcon').each(function (i) {
-        //     var bottom_of_object = $('.projectSection').offset().top + $(this).outerHeight();
-        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
-        //     var top_of_obejct = $(this).offset().top;
-        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
-        //     /* If the object is completely visible in the window, fade it it */
-        //     if (screen.width >= 1024) {
-        //         if (bottom_of_window > bottom_of_object) {
-        //             $(this).show();
-        //         }
-        //         if (bottom_of_window < top_of_Object){
-        //             $(this).hide();
-        //         }
-        //     } else {
-        //         if (bottom_of_window > bottom_of_object) {
-        //             $(this).animate({ 'right': '10', 'opacity': '1' }, 500);
-        //         }
-        //     }
-        // });
-
         $(document).on('scroll', function () {
-            var top_of_object = $('.projectSection').offset().top;
-        if ($(document).scrollTop() > top_of_object) {
-            $('#bottomIcon').css('display', 'block');
+            var top_of_object = $('.projectSection').offset().top + $('.projectSection').outerHeight();
+        if ($(document).scrollTop()+$(window).height() > top_of_object+150) {
+            $('#bottomIcon').show();
         } else {
-            $('#bottomIcon').css('display', 'none');
+            $('#bottomIcon').hide();
         }
     });
-
 
     });
 });
 
-{/* $('#description').style.display('none'); */ }
+// after the page finished loading 
 window.onload = function () {
-    $('#description').show();
-    $('#arrow').show();
-    $('#arrow').addClass('bounce');
+    // show I'm chris
+    $('#header').show();
+    // show description after 1 sec
+    setTimeout(function(){
+        $('#paragraph').show();
+    }, 1000);
+    // show arrow after another sec
+    setTimeout(function(){
+        $('#arrow').show();
+    }, 2000);
+    // start bouncing after another sec
+    setTimeout(function(){
+        $('#arrow').addClass('bounce');
+    }, 3000);
 };

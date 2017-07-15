@@ -81,6 +81,7 @@ h6, .h6 {
 .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
+  position:relative;
 }
 .blog-title {
   margin-top: 250px;
@@ -188,7 +189,7 @@ h6, .h6 {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url('images/Screen Shot 2017-07-14 at 8.08.34 AM.png') no-repeat;
+     /* background: url('images/Screen Shot 2017-07-14 at 8.08.34 AM.png') no-repeat;  */
     background-size: cover; 
 }
 
@@ -204,7 +205,11 @@ h6, .h6 {
     background-size:100%;
     z-index: 9990;
     border:transparent;
-    
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -ms-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+    animation: fadein 2s;
   }
 
 .bounce{
@@ -326,11 +331,8 @@ h6, .h6 {
 
 .introSection{
   position:relative;
-  background-color:white;
   height:900px;
 	background:rgba(0, 0, 0, 0.6);
-  background-size:cover;
-  background-repeat: no-repeat;
   z-index: 50;
 }
 
@@ -348,7 +350,7 @@ h6, .h6 {
 /*here  */
 #intro{
 	position:absolute;   
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.3);
   /* margin:50px; */
   /* max-width:95vw;    */
   height:850px;  
@@ -378,7 +380,8 @@ h6, .h6 {
   position:relative;
   background-color:rgba(0, 0, 0, 0.6);
   height:1400px;
-   background:url('images/pic_computersupport-e1475009415368.jpg'); 
+  background:url('images/pic_computersupport-e1475009415368.jpg'); 
+  /* opacity: 0.9; */
   background-size:cover;
   box-shadow: 20px 0px 20px 10px rgba(0,0,0,1);
   z-index: 40;
@@ -488,19 +491,46 @@ nav.navbar.shrink {
 }
 
 #description p {
-   -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-         -o-animation: fadein 4s; /* Opera < 12.1 */
-            animation: fadein 4s;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:350px auto;
+  -webkit-animation: fadein 4s;
+  -moz-animation: fadein 4s; 
+  -ms-animation: fadein 4s; 
+  -o-animation: fadein 4s; 
+  animation: fadein 4s;
+
+    
+} 
+
+@keyframes typing{ 
+   from { width: 0 }
+  to { width: 395px }
+} 
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to 
+  { border-color: white; } 50% 
+  { border-color: transparent }
 }
 
+
 #description h1 {
-   -webkit-animation: fadein 2s; 
-       -moz-animation: fadein 2s; 
-        -ms-animation: fadein 2s; 
-         -o-animation: fadein 2s; 
-            animation: fadein 2s;
+  position:absolute;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width:395px;
+  /* color:rgb(10,94,43); */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  right:0;   
+  left:0;  
+  margin:250px auto; 
+  animation: 
+    typing 1s steps(10, end),
+    blink-caret 1s step-end infinite;
 }
 
 .hideme
