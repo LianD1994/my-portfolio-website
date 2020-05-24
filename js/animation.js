@@ -24,17 +24,27 @@ if (screen.width >= 1024)
         if ($(document).scrollTop() > 50) {
             $('.iconContainer img').css('width', '30px');
             $('.iconContainer img').css('height', '30px');
-            $('.iconContainer').css('width', '290px');
+            $('.iconContainer').css('width', '395px');
             $('.resume-btn').css('height', '30px');
             $('.resume-btn').css('line-height', '5px');
-            $('.resume-btn').css('right', '100px');
+            $('.resume-btn').css('right', '10px');
+            $('.resume-btn').css('font-size', '16px');
+            $('.blog-btn').css('height', '30px');
+            $('.blog-btn').css('line-height', '5px');
+            $('.blog-btn').css('right', '113px');
+            $('.blog-btn').css('font-size', '16px');
         } else {
             $('.iconContainer img').css('width', '50px');
             $('.iconContainer img').css('height', '50px');
-            $('.iconContainer').css('width', '400px');
+            $('.iconContainer').css('width', '500px');
             $('.resume-btn').css('height', '50px');
             $('.resume-btn').css('line-height', '25px');
             $('.resume-btn').css('right', '10px');
+            $('.resume-btn').css('font-size', '20px');
+            $('.blog-btn').css('height', '50px');
+            $('.blog-btn').css('line-height', '25px');
+            $('.blog-btn').css('right', '116px');
+            $('.blog-btn').css('font-size', '20px');
         }
     });
 
@@ -68,7 +78,7 @@ $(document).ready(function () {
                     $(this).animate({ 'right': '50', 'opacity': '1' }, 500);
                 }
             } else {
-                if (bottom_of_window > bottom_of_object) {
+                if (bottom_of_window > bottom_of_object - 100) {
                     $(this).animate({ 'right': '10', 'opacity': '1' }, 500);
                 }
             }
@@ -105,31 +115,64 @@ $(document).ready(function () {
         });
 
         $(document).on('scroll', function () {
-            var top_of_object = $('.projectSection').offset().top + $('.projectSection').outerHeight();
-        if ($(document).scrollTop()+$(window).height() > top_of_object+150) {
-            $('#bottomIcon').show();
-        } else {
-            $('#bottomIcon').hide();
-        }
+            if(screen.width >= 1024){
+                var top_of_object = $('#blogSection').offset().top + $('#blogSection').outerHeight();
+                if ($(document).scrollTop()+$(window).height() > top_of_object+150) {
+                    $('#bottomIcon').show();
+                } else {
+                    $('#bottomIcon').hide();
+                }
+            }else{
+                var bottom_of_object = $('#blogSection').offset().top + $('#blogSection').outerHeight();
+                if ($(document).scrollTop()+$(window).height() > bottom_of_object+100) {
+                    $('#bottomIcon').show();
+                } else {
+                    $('#bottomIcon').hide();
+                }
+            }
+        });
     });
-
+    
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 800, function(){
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+        }
     });
 });
 
 // after the page finished loading 
 window.onload = function () {
     // show I'm chris
-    $('#header').show();
+    setTimeout(function(){
+        $('#header').show();
+    }, 1000);
     // show description after 1 sec
     setTimeout(function(){
         $('#paragraph').show();
-    }, 1000);
+    }, 2000);
     // show arrow after another sec
     setTimeout(function(){
         $('#arrow').show();
-    }, 2000);
+    }, 3000);
     // start bouncing after another sec
     setTimeout(function(){
         $('#arrow').addClass('bounce');
-    }, 3000);
+    }, 4000);
 };
+
+jQuery('.blog-btn').click(function(){
+   jQuery(this).toggleClass('.blog-btn');
+});

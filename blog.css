@@ -79,7 +79,8 @@ h6, .h6 {
  */
 
 .blog-header {
-  padding-top: 20px;
+  padding-top: 20
+  px;
   padding-bottom: 20px;
   position:relative;
 }
@@ -161,23 +162,85 @@ h6, .h6 {
 .blog-footer {
   padding: 40px 0;
   text-align: center;
-   background-color: rgba(0, 0, 0, 0.6);  
-   height:200px;  
-   /* background-color:white;  */
-   /* position:fixed;   */
-    /* z-index:9999999;    */
+  background-color: rgba(0, 0, 0, 0.8);  
+  height:200px;  
 }
 
-.blog-footer p:last-child {
-  /* margin-bottom: 0; */
-}
 
 /*
  * === My css ===
  */
  
+/* Resume Page CSS */
+#resTop{
+  position:relative;
+  height:700px;
+  background: url('images/startup-593331_1280 2.jpg'), black;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+#eduSec{
+  position:relative;
+  height:80px;
+  z-index:99;
+}
+
+#eduSec2{
+  position:relative;
+  height:140px;
+}
+/* #waSec{
+  position:relative;
+  height:120px;
+} */
+
+#expSec{
+  position: relative;
+  height:70px;
+}
+
+#expSec2{
+  position: relative;
+  height:250px;
+}
+
+#expSec3{
+  position: relative;
+  height:250px;
+}
+
+#expSec4{
+  position: relative;
+  height:250px;
+}
+
+#skillSec{
+  position: relative;
+  height:500px;
+}
+
+.resPageSecTitle{
+  position:absolute;
+  left:100px;
+  font-size:16pt;
+  color:grey;
+  font-weight:bold;
+}
+
+.resPageContent{
+  position: absolute;
+  left: 200px;
+  top:70px;
+  font-size:13pt;
+  font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* End of Resume Page CSS */
+
+
  video#bgvid { 
-    position: fixed;
+     position: fixed; 
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -189,8 +252,13 @@ h6, .h6 {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-     /* background: url('images/Screen Shot 2017-07-14 at 8.08.34 AM.png') no-repeat;  */
+    background:black;      
     background-size: cover; 
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -ms-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+    animation: fadein 2s; 
 }
 
   .arrow {
@@ -198,12 +266,11 @@ h6, .h6 {
     bottom:200px;
     left: 0; 
     right: 0;  
-     margin: auto;   
+    margin: auto;   
     height:100px;
     width:100px;
     background:url('images/icon-chevron-down-512px.png'); 
     background-size:100%;
-    z-index: 9990;
     border:transparent;
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s; 
@@ -220,29 +287,44 @@ h6, .h6 {
 } 
 
   
-  @-webkit-keyframes bounce {
+@-webkit-keyframes bounce {
+  0%       { bottom:200px; }
+  50%      { bottom:185px; }
+  100%     {bottom:170;}
+}
+
+@-moz-keyframes bounce {
     0%       { bottom:200px; }
-    50%      { bottom:185px; }
-    100%     {bottom:170;}
-  }
-  
-   @-moz-keyframes bounce {
-     0%       { bottom:200px; }
-    50%      { bottom:185px; }
-    100%     {bottom:170;}
-  }
-  
-   @-o-keyframes bounce {
-      0%       { bottom:200px; }
-    50%      { bottom:185px; }
-    100%     {bottom:170;}
-  }
-  
-   @keyframes bounce {
-     0%       { bottom:200px; }
-    50%      { bottom:185px; }
-    100%     {bottom:170;}
-  }
+  50%      { bottom:185px; }
+  100%     {bottom:170;}
+}
+
+@-o-keyframes bounce {
+    0%       { bottom:200px; }
+  50%      { bottom:185px; }
+  100%     {bottom:170;}
+}
+
+@keyframes bounce {
+    0%       { bottom:200px; }
+  50%      { bottom:185px; }
+  100%     {bottom:170;}
+}
+
+.blog-btn{
+  position:absolute;
+  height:50px;
+  width:100px;
+  right:116px;
+  background-color:#262626;
+  color:aliceblue;
+  border-width:3px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  border-color:transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
 
 .resume-btn{
   position:absolute;
@@ -252,23 +334,34 @@ h6, .h6 {
   background-color:#262626;
   color:aliceblue;
   border-width:3px;
-  font-size: 16px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
   border-color:transparent;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s;
 }
 
+.blog-btn:hover{
+  color:black;
+  background-color:yellow;
+}
+
+.blog-btn:focus{
+  background-color:#262626;
+  color:aliceblue;
+}
+
 .resume-btn:hover{
   color:black;
-  background-color:aliceblue;
+  background-color:yellowgreen;
 }
 
 .astar-btn{
   position:absolute;
   margin-right:50px;
   color:aliceblue;
-  background-color:olivedrab;
+  /* background-color:olivedrab; */
+  background-color:transparent;
   border-width:5px;
   font-size:30px;
   border-color:aliceblue;
@@ -300,19 +393,15 @@ h6, .h6 {
 }
 
 .iconContainer{
-  z-index:100;
-  position:fixed;
-  height:65px;
-  top:0px;
-  border: 2px solid transparent; 
-  width:400px;
-  right:20px;
+   z-index:100; 
+  position:fixed; 
+  /* border: 2px solid white;  */
+  height:55px;
+   width:500px; 
+   right:0px; 
+   top:10px; 
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s;
-}
-
-.iconContainer .container{
-  position:absolute;height:60px;width:395px;top:5px;left:5px
+  transition: all 0.4s; 
 }
 
 /*section*/
@@ -334,7 +423,20 @@ h6, .h6 {
   height:900px;
 	background:rgba(0, 0, 0, 0.6);
   z-index: 50;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,1);  
+  
 }
+
+/* #introSecBg{ */
+  /* height:860px; */
+  /* width: 80%; */
+  /* right:20px; */
+  /* background:url('images/minimalist_tree-wallpaper-1440x900.jpg'); */
+  /* opacity:0.3;    */
+    /* z-index:-1;   */
+    /* background-size:cover;  */
+   /* background-position-y:200px;   */
+/* } */
 
 #backpic{
 	src:"images/15726494_10208358139895004_9049946143911081375_n.jpg";
@@ -351,10 +453,9 @@ h6, .h6 {
 #intro{
 	position:absolute;   
   background:rgba(0,0,0,0.3);
-  /* margin:50px; */
-  /* max-width:95vw;    */
   height:850px;  
-	margin:0px 0px 0px 50px;  
+  margin:0px 0px 0px 50px;  
+  top:10px;
 	right:0;  
 	/* border-radius: 25px; */
 }
@@ -365,54 +466,72 @@ h6, .h6 {
 
 #intro h2{
   font-size:27pt;
+  font-family:monaco, Consolas, "Lucida Console", monospace;
   /* color:rgb(10,94,43); */
   color:wheat;
   margin: 0px 0px 0px 600px;
 }
 
 #intro p{
-  font-size:15pt;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size:13pt;
   color:azure;
   margin: 0px 0px 0px 600px;
 }
 
+/* ========== Start of Project section ========== */
 .projectSection{
   position:relative;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(0, 0, 0, 0.2);    
   height:1400px;
-  background:url('images/pic_computersupport-e1475009415368.jpg'); 
-  /* opacity: 0.9; */
+  /* background:url('images/pic_computersupport-e1475009415368.jpg');  */
+  /* opacity: 0.9;    */
   background-size:cover;
-  box-shadow: 20px 0px 20px 10px rgba(0,0,0,1);
+   /* box-shadow: 0px 10px 20px 0px rgba(0,0,0,1);  */
   z-index: 40;
 }
 
+#proSecBg{
+  /* position:fixed; */
+  height:1400px;
+  background:url('images/Black-minimalist-minimalistic-HD-wallpapers.jpg');
+  opacity:0.8;  
+  background-size: auto 800px; 
+   background-position-x:200px;   
+}
+
 #proSecTitle{
-	position:absolute;
+  position:absolute;
+  top:-10px;
+  left:0px;
+  font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size:50px;
 	color:white;
 	margin:50px;
 }
 
 #proSecDes{
+  /* font-family: monaco, Consolas, "Lucida Console", monospace; */
 	position:absolute;
 	top:110px;
-	left:50px;
-	color:burlywood;
+  left:50px;
+  /* background:rgba(0, 0, 0, 0.3); */
 }
 
 /*===ProjectOne===*/
 .projectOne{
-  position:absolute;
-  background:steelblue;
-  background-color:rgba(0, 0, 0, 0.6);
+    position:absolute;  
+    background-color:rgba(51, 153, 255, 0.2);  
+      /* background:url('images/Black-minimalist-minimalistic-HD-wallpapers.jpg');      */
+    /* opacity:0.9;   */
+   /* background-size:100%;  */
   width:93%;
   height:540px;
   top:130px;
   margin:50px 50px 50px 0px;
   border-radius:25px;
-  z-index:80;
-  box-shadow: 0px 2px 20px black;
+  /* z-index:80; */
+  box-shadow: 10px 10px 20px 3px black;
   -webkit-animation: all 0.4s ease; 
        -moz-animation: all 2s ease; 
         -ms-animation: all 2s ease; 
@@ -421,12 +540,23 @@ h6, .h6 {
 }
 
 .projectOne .container{
-  width:100%;height:100%;overflow:hidden;text-overflow:ellipsis;border:2px solid transparent
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  border:2px solid transparent
 }
 
 #astarHead{
-	font-size:50px;
+  font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+	font-size:40px;
 	color:white;
+}
+
+#astarP{
+  font-size:18px;
+  color:bisque;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
 #astar img{
@@ -441,15 +571,15 @@ h6, .h6 {
 .projectTwo{
   position:absolute;
   background:steelblue;
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color:rgba(51, 255, 153, 0.2);
   width:93%;
   height:540px;
   top:750px;
   right:0px;
   margin:50px 0px 50px 50px;
   border-radius:25px;
-  z-index:80;
-  box-shadow: 0px 2px 20px black;
+  /* z-index:80; */
+  box-shadow: 10px 10px 20px 3px black;
   -webkit-animation: fadein 2s ease; 
        -moz-animation: fadein 2s; 
         -ms-animation: fadein 2s; 
@@ -462,8 +592,15 @@ h6, .h6 {
 }
 
 #linkHead{
-	font-size:50px;
+  font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+	font-size:40px;
 	color:white;
+}
+
+#linkP{
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size:18px;
+  color:bisque;
 }
 
 #link-checker img{
@@ -491,6 +628,8 @@ nav.navbar.shrink {
 }
 
 #description p {
+  /* font-family: monaco, Consolas, "Lucida Console", monospace; */
+   /* font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;  */
   position:absolute;
   left:0;
   right:0;
@@ -500,13 +639,71 @@ nav.navbar.shrink {
   -ms-animation: fadein 4s; 
   -o-animation: fadein 4s; 
   animation: fadein 4s;
-
-    
 } 
+
+#description h1 {
+  position:absolute;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width:660px;
+  height: 90px;
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.00em; /* Adjust as needed */
+  right:0;   
+  left:0;  
+  margin:250px auto; 
+  animation: 
+    typing 1.5s steps(19, end),
+    blink-caret 1s step-end infinite;
+}
+
+#resDes h1 {
+  position:absolute;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width:500px;
+  height: 90px;
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.00em; /* Adjust as needed */
+  right:0;   
+  left:0;  
+  margin:250px auto; 
+  animation: 
+    blink-caret 1s step-end infinite;
+}
+
+#resDes p {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:350px auto;
+  -webkit-animation: fadein 4s;
+  -moz-animation: fadein 4s; 
+  -ms-animation: fadein 4s; 
+  -o-animation: fadein 4s; 
+  animation: fadein 4s;
+}
+
+#blogSection{
+  position:relative;
+  height:700px;
+  overflow-y: auto;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,1); 
+  z-index: 40; 
+}
+
+#blogSecBg{
+  height:700px;
+  background:url('images/Backgrounds-dark-minimalist-wallpapers.jpg');
+  opacity:0.9;
+  background-size:cover;
+  background-position-y:-130px;  
+}
+
 
 @keyframes typing{ 
    from { width: 0 }
-  to { width: 395px }
+  to { width: 660px }
 } 
 
 /* The typewriter cursor effect */
@@ -516,25 +713,7 @@ nav.navbar.shrink {
   { border-color: transparent }
 }
 
-
-#description h1 {
-  position:absolute;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  width:395px;
-  /* color:rgb(10,94,43); */
-  border-right: .15em solid white; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 0.05em; /* Adjust as needed */
-  right:0;   
-  left:0;  
-  margin:250px auto; 
-  animation: 
-    typing 1s steps(10, end),
-    blink-caret 1s step-end infinite;
-}
-
-.hideme
-{
+.hideme{
     opacity:0;
 }
 
@@ -650,178 +829,507 @@ nav.navbar.shrink {
 /*==========  Mobile First Method  ==========*/
 
 /* iphone 5 */ 
-@media only screen and (min-width : 320px) and (max-width: 374) {
+@media only screen and (min-width : 320px) and (max-width: 359) {
 	.topSection{
 		background-size: 320px auto;
 		height:100px;
 	}
 }
 
+/* Galaxy S5  */
+@media (min-width : 360px) and (max-width:374px){
+
+/* ================== Top Section ====================== */
+.topSection{
+  /* background-size: auto 500px; */
+  /* background-position: -200px 0px; */
+  height:667px;
+}
+
+.arrow {
+   bottom:150px; 
+} 
+
+ @-webkit-keyframes bounce {
+  0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+}
+
+@-moz-keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+}
+
+@-o-keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+} 
+
+ @keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+} 
+
+#description h1 {
+width:250px;
+margin:150px auto; 
+}
+
+#description p {
+  margin:200px auto;
+} 
+
+@keyframes typing{ 
+   from { width: 0 }
+  to { width: 250px }
+} 
+
+.blog-title{
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.blog-description{
+  font-size:20px
+}
+
+.iconContainer{
+  z-index:100;
+  position:fixed;
+  height:65px;
+  top:0px;
+  border: 2px solid transparent; 
+  width:280px;
+  right:0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
+
+.iconContainer .container{
+  width: 280px;
+  left:0px;
+}
+
+.iconContainer img{
+  width: 30px;
+  height : 30px;
+  right: 20px;
+}
+
+.resume-btn{
+  position:absolute;
+  height:30px;
+  width:80px;
+  left:182px; 
+  line-height: 5px;
+  background-color:#262626;
+  color:aliceblue;
+  border-width:3px;
+  font-size: 13px;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  border-color:transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
+
+
+/* ================== Intro Section ====================== */
+.introSection{
+  height:667px;
+   background:url('images/15726494_10208358139895004_9049946143911081375_n.jpg'); 
+   opacity:0.9; 
+   background-size:cover; 
+   background-repeat: no-repeat; 
+   box-shadow: 10px 10px 20px rgba(0,0,0,0.8);  
+  z-index: 50;
+}
+
+
+#intro h2{
+  font-size:27pt;
+  font-family:monaco, Consolas, "Lucida Console", monospace;
+  /* color:rgb(10,94,43); */
+  color:wheat;
+  margin: 0px 0px 0px 0px;
+}
+
+#intro p{
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size:12pt;
+  color:azure;
+  padding:0px;
+  margin: 0px 0px 0px 0px;
+}
+
+#profilePic{
+  margin:0px 0px 0px 0px;
+}
+
+ #backpic{
+  display:none;
+} 
+
+#intro {
+  position:absolute;
+  background:rgba(0, 0, 0, 0.8);
+  margin:10px 0px 0px 10px;
+  height:647px;
+  width:355px; 
+  right:0;
+  border-radius: 25px;
+  padding:20px;
+}
+
+#intro img{
+  width:40px;
+  height:40px;
+}
+
+#intro .blog-post-title{
+  margin-bottom: 5px;
+  font-size: 20px;
+  color:wheat;
+  position:absolute;
+  left:80px;
+  top:35px
+}
+
+
+/* ===================== Project Section =====================  */
+.projectSection{
+  height:1100px;
+}
+
+#proSecTitle{
+  position:absolute;
+  font-size:30px;
+  color:white;
+  margin:20px;
+}
+
+#proSecDes{
+  position:absolute;
+  font-size:16px;
+  top:65px;
+  left:20px;
+  color:burlywood;
+}
+
+#astar img{
+  height:200px;
+  margin:10px 0px 10px 0px;
+  float:top;
+}
+
+.projectOne{
+  height:470px;
+  top:50px;
+  border-radius:10px;
+}
+
+#astarHead{
+  font-size:30px;
+  color:white;
+}
+
+#astarP{
+  font-size:13px;
+}
+
+.astar-btn{
+   font-size:20px; 
+}
+
+.projectTwo{
+  height:470px;
+  top:550px;
+  border-radius:10px;
+}
+
+#linkHead{
+  font-size:30px;
+  color:white;
+}
+
+#linkP{
+  font-size:13px;
+}
+
+#link-checker img{
+  float:top;
+  height:200px;
+  margin:10px 0px 10px 0px;
+}
+}
+
 /* iphone 6, 7 */ 
 @media (min-width : 375px) and (max-width:479px){
-	.topSection{
-		background-size: auto 500px;
-		background-position: -200px 0px;
-		height:500px;
-	}
-	
-	.blog-title{
-		margin-top: 50px;
-		margin-bottom: 0;
-		font-size: 40px;
-		font-weight: normal;
-	}
 
-	.blog-description{
-		font-size:20px
-	}
+/* ================== Top Section ====================== */
+.topSection{
+  height:667px;
+}
 
-	.iconContainer{
-		z-index:100;
-		position:fixed;
-		height:65px;
-		top:0px;
-		border: 2px solid transparent; 
-		width:280px;
-		right:0px;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s;
-	}
-	
-	.iconContainer .container{
-		width: 280px;
-		left:0px;
-	}
+.arrow {
+   bottom:150px; 
+} 
 
-	.iconContainer img{
-		width: 30px;
-		height : 30px;
-		right: 20px;
-	}
+ @-webkit-keyframes bounce {
+  0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+}
 
-	.resume-btn{
-		position:absolute;
-		height:30px;
-		width:80px;
-		left:182px;
-		line-height: 5px;
-		background-color:#262626;
-		color:aliceblue;
-		border-width:3px;
-		font-size: 13px;
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		border-color:transparent;
-		-webkit-transition: all 0.4s ease;
-		transition: all 0.4s;
-	}
+@-moz-keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+}
 
-	.introSection{
-    height:510px;
-		background:url('images/15726494_10208358139895004_9049946143911081375_n.jpg');
-		background-size:cover;
-		background-repeat: no-repeat;
-		 box-shadow: 10px 10px 20px rgba(0,0,0,0.8); 
-		z-index: 50;
-	}
+@-o-keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+} 
 
-	#backpic{
-		display:none;
-	}
+ @keyframes bounce {
+ 0%       { bottom:150px; }
+  50%      { bottom:145px; }
+  100%     {bottom:140px;}
+} 
 
-	#intro {
-		position:absolute;
-		background:rgba(0, 0, 0, 0.6);
-		margin:10px 0px 0px 10px;
-		 width:355px; 
-		right:0;
-		border-radius: 25px;
-		padding:20px;
-	}
+#description h1 {
+  height:40px;
+  font-size:22.5pt;
+  width:250px;
+  margin:150px auto; 
+}
 
-	#intro img{
-		width:40px;
-		height:40px;
-	}
+#description p {
+  margin:200px auto;
+} 
 
-	#intro .blog-post-title{
-		margin-bottom: 5px;
-		font-size: 20px;
-		color:azure;
-		position:absolute;
-		left:80px;
-		top:35px
-	}
+@keyframes typing{ 
+   from { width: 0 }
+  to { width: 250px }
+} 
 
-	#intro p{
-		font-size: 11pt;
-		color:azure;
-	}
+.blog-title{
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
 
-	.projectSection{
-		height:1100px;
-	}
+.blog-description{
+  font-size:20px
+}
 
-	#proSecTitle{
-		position:absolute;
-		font-size:30px;
-		color:white;
-		margin:20px;
-	}
+.iconContainer{
+  z-index:100;
+  position:fixed;
+  height:65px;
+  top:0px;
+  border: 2px solid transparent; 
+  width:360px;
+  right:0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
 
-	#proSecDes{
-		position:absolute;
-		font-size:16px;
-		top:65px;
-		left:20px;
-		color:burlywood;
-	}
+/* .iconContainer .container{
+  width: 380px;
+  left:0px;
+} */
 
-	#astar img{
-		height:200px;
-		margin:10px 0px 10px 0px;
-		float:top;
-	}
+.iconContainer img{
+  width: 30px;
+  height : 30px;
+  right: 20px;
+}
 
-	.projectOne{
-		height:470px;
-		top:50px;
-		border-radius:10px;
-	}
+.resume-btn{
+  position:absolute;
+  height:30px;
+  width:80px;
+  left:266px;
+  line-height: 5px;
+  background-color:#262626;
+  color:aliceblue;
+  border-width:3px;
+  font-size: 13px;
+  border-color:transparent;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";  
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
 
-	#astarHead{
-		font-size:30px;
-		color:white;
-	}
+.blog-btn{
+  position:absolute;
+  height:30px;
+  width:80px;
+  left:182px;
+  line-height: 5px;
+  background-color:#262626;
+  color:aliceblue;
+  border-width:3px;
+  font-size: 13px;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";  
+  border-color:transparent;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s;
+}
 
-	.astar-btn{
-		position:absolute;
-		margin-right:50px;
-		color:aliceblue;
-		background-color:olivedrab;
-		border-width:5px;
-		font-size:20px;
-		padding:5px;
-		border-color:aliceblue;
-		line-height: 80px;
-		white-space: normal;
-	}
 
-	.projectTwo{
-		height:470px;
-		top:550px;
-		border-radius:10px;
-	}
+/* ================== Intro Section ====================== */
+.introSection{
+  height:667px;
+  background:url('images/15726494_10208358139895004_9049946143911081375_n.jpg');
+  opacity:0.9;
+  background-size:cover;
+  background-repeat: no-repeat;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.8); 
+  z-index: 50;
+}
 
-	#linkHead{
-		font-size:30px;
-		color:white;
-	}
+#intro h2{
+  font-size:27pt;
+  font-family:monaco, Consolas, "Lucida Console", monospace;
+  /* color:rgb(10,94,43); */
+  color:wheat;
+  margin: 0px 0px 0px 0px;
+}
 
-	#link-checker img{
-		float:top;
-		height:200px;
-		margin:10px 0px 10px 0px;
-	}
+#intro p{
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size:9.3pt;
+  color:azure;
+  padding:0px;
+  margin: 0px 0px 0px 0px;
+}
+
+#profilePic{
+  margin:0px 0px 0px 0px;
+}
+
+ #backpic{
+  display:none;
+} 
+
+#intro {
+  position:absolute;
+  background:rgba(0, 0, 0, 0.8);
+  margin:0px 0px 0px 10px;
+  height:647px;
+  width:355px; 
+  right:0;
+  border-radius: 25px;
+  padding:20px;
+}
+
+#intro img{
+  width:40px;
+  height:40px;
+}
+
+#intro .blog-post-title{
+  margin-bottom: 5px;
+  font-size: 20px;
+  color:wheat;
+  position:absolute;
+  left:80px;
+  top:35px
+}
+
+
+/* ===================== Project Section =====================  */
+.projectSection{
+  height:1100px;
+}
+
+#proSecTitle{
+  position:absolute;
+  font-size:30px;
+  color:white;
+  margin:20px;
+}
+
+#proSecDes{
+  position:absolute;
+  font-size:16px;
+  top:65px;
+  left:20px;
+  color:burlywood;
+}
+
+#astar img{
+  height:200px;
+  margin:10px 0px 10px 0px;
+  float:top;
+}
+
+.projectOne{
+  height:470px;
+  top:50px;
+  border-radius:10px;
+}
+
+#astarHead{
+  font-size:30px;
+  color:white;
+}
+
+#astarP{
+  font-size:13px;
+}
+
+.astar-btn{
+   font-size:20px; 
+}
+
+.projectTwo{
+  height:470px;
+  top:550px;
+  border-radius:10px;
+}
+
+#linkHead{
+  font-size:30px;
+  color:white;
+}
+
+#linkP{
+  font-size:13px;
+}
+
+#link-checker img{
+  float:top;
+  height:200px;
+  margin:10px 0px 10px 0px;
+}
+
+/* ========== Bottom section ==========  */
+#bottomIcon{
+  position:fixed;
+  bottom:70px;
+  z-index:0;
+  width:245px;
+  left:0;
+  right:0;
+  margin: auto;
+  display:none
+}
+}
+
+/* Nexus 5X  */
+@media (min-width : 412px) and (max-width:374px) {
+
 }
 
 
@@ -844,3 +1352,6 @@ nav.navbar.shrink {
 @media only screen and (min-width : 1200px) {
 
 }
+
+
+
