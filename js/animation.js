@@ -9,22 +9,15 @@ i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
 ga('create', 'UA-101997709-1', 'auto');
 ga('send', 'pageview');
 
-// <!--collapse the navbar on scroll-->
-$(window).scroll(function () {
-    if ($(document).scrollTop() > 50) {
-        $('nav').addClass('shrink');
-    } else {
-        $('nav').removeClass('shrink');
-    }
-});
+var bottom_of_window = $(document).scrollTop() + $(document).height();
 
 /* icon bar collapse animation */
 if (screen.width >= 1024)
     $(document).on('scroll', function () {
-        if ($(document).scrollTop() > 50) {
+        if ($(document).scrollTop() > 10) {
             $('.iconContainer img').css('width', '30px');
             $('.iconContainer img').css('height', '30px');
-            $('.iconContainer').css('width', '395px');
+            $('.iconContainer').css('width', '400px');
             $('.resume-btn').css('height', '30px');
             $('.resume-btn').css('line-height', '5px');
             $('.resume-btn').css('right', '10px');
@@ -46,6 +39,14 @@ if (screen.width >= 1024)
             $('.blog-btn').css('right', '116px');
             $('.blog-btn').css('font-size', '20px');
         }
+
+        if($(document).scrollTop() > $('#topSection').outerHeight()/3){
+            $('#intro').css('width', '85vw');
+            $('#intro').css('opacity', '1');
+        } else {
+            $('#intro').css('width', '0vw');
+            $('#intro').css('opacity', '0');
+        }
     });
 
 // scroll fade in animation
@@ -65,22 +66,6 @@ $(document).ready(function () {
             /* If the object is completely visible in the window, fade it it */
             if (bottom_of_window > bottom_of_object) {
                 $(this).animate({ 'left': '50', 'opacity': '1' }, 500);
-            }
-        });
-
-
-        $('#intro').each(function (i) {
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if (screen.width >= 1024) {
-                if (bottom_of_window > bottom_of_object - 400) {
-                    $(this).animate({ 'right': '50', 'opacity': '1' }, 500);
-                }
-            } else {
-                if (bottom_of_window > bottom_of_object - 100) {
-                    $(this).animate({ 'right': '10', 'opacity': '1' }, 500);
-                }
             }
         });
 
