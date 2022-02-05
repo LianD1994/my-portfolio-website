@@ -17,7 +17,7 @@ if (screen.width >= 1024)
         if ($(document).scrollTop() > 10) {
             $('.iconContainer img').css('width', '30px');
             $('.iconContainer img').css('height', '30px');
-            $('.iconContainer').css('width', '400px');
+            $('.iconContainer').css('width', '300px');
             $('.resume-btn').css('height', '30px');
             $('.resume-btn').css('line-height', '5px');
             $('.resume-btn').css('right', '10px');
@@ -29,7 +29,7 @@ if (screen.width >= 1024)
         } else {
             $('.iconContainer img').css('width', '50px');
             $('.iconContainer img').css('height', '50px');
-            $('.iconContainer').css('width', '500px');
+            $('.iconContainer').css('width', '340px');
             $('.resume-btn').css('height', '50px');
             $('.resume-btn').css('line-height', '25px');
             $('.resume-btn').css('right', '10px');
@@ -41,11 +41,21 @@ if (screen.width >= 1024)
         }
 
         if($(document).scrollTop() > $('#topSection').outerHeight()/3){
+            $('#intro').css('max-width', '1000px');
             $('#intro').css('width', '85vw');
             $('#intro').css('opacity', '1');
         } else {
             $('#intro').css('width', '0vw');
             $('#intro').css('opacity', '0');
+        }
+
+        if($(document).scrollTop() > $('#intro').outerHeight()*2){
+            $('#personal').css('max-width', '1000px');
+            $('#personal').css('width', '85vw');
+            $('#personal').css('opacity', '1');
+        } else {
+            $('#personal').css('width', '0vw');
+            $('#personal').css('opacity', '0');
         }
     });
 
@@ -53,52 +63,6 @@ if (screen.width >= 1024)
 $(document).ready(function () {
     /* Every time the window is scrolled ... */
     $(window).scroll(function () {
-        /* Check the location of each desired element */
-        $('#backpic').each(function (i) {
-            if (screen.width >= 1024) {
-                // show backpic same time as intro on desktop
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 400;
-            } else {
-                // show them one by one on mobile
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            }
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if (bottom_of_window > bottom_of_object) {
-                $(this).animate({ 'left': '50', 'opacity': '1' }, 500);
-            }
-        });
-
-        $('#astar').each(function (i) {
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if (screen.width >= 1024) {
-                if (bottom_of_window > bottom_of_object) {
-                    $(this).animate({ 'left': '50', 'opacity': '1' }, 500);
-                }
-            } else {
-                if (bottom_of_window > bottom_of_object) {
-                    $(this).animate({ 'left': '10', 'opacity': '1' }, 500);
-                }
-            }
-        });
-
-        $('#link-checker').each(function (i) {
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if (screen.width >= 1024) {
-                if (bottom_of_window > bottom_of_object) {
-                    $(this).animate({ 'right': '50', 'opacity': '1' }, 500);
-                }
-            } else {
-                if (bottom_of_window > bottom_of_object) {
-                    $(this).animate({ 'right': '10', 'opacity': '1' }, 500);
-                }
-            }
-        });
-
         $(document).on('scroll', function () {
             if(screen.width >= 1024){
                 var top_of_object = $('#blogSection').offset().top + $('#blogSection').outerHeight();
