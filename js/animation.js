@@ -49,7 +49,7 @@ if (screen.width >= 1024)
             $('#intro').css('opacity', '0');
         }
 
-        if($(document).scrollTop() > $('#intro').outerHeight()*2){
+        if($(document).scrollTop() > $('#intro').outerHeight()*3){
             $('#personal').css('max-width', '1000px');
             $('#personal').css('width', '85vw');
             $('#personal').css('opacity', '1');
